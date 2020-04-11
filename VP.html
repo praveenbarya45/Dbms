@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+<!-- Begin
+function s(num, val) {
+amount = num * 1; // amount is the num or NaN
+sum = (!num ? 0 : num) * val;  // the sum for that bill or coin
+
+if (isNaN(amount)) { // if the entire is not a number
+
+alert(
+"' " + num + " ' is not a valid entry and that field will "
++ "not be included in the total money calculation."
+);
+
+return 0;
+}
+else
+return sum; // if it is OK, send sum back
+}
+
+function money(form) {
+hun = s(form.hun.value, 10000); // Each amount is the returned value
+fif = s(form.fif.value, 5000);  // for the amount in the s() function
+two=s(form.two.value, 2000);
+twe = s(form.twe.value, 1000);
+ten = s(form.ten.value, 500);
+fiv = s(form.fiv.value, 100);
+one = s(form.one.value, 50);
+
+// add up all the amounts
+var ttl = hun + fif +two+ twe + ten + fiv
++ one;
+
+ttl = "" + ((Math.round(ttl * 100)) / 100);
+
+dec1 = ttl.substring(ttl.length-3, ttl.length-2);
+dec2 = ttl.substring(ttl.length-2, ttl.length-1);
+
+if (dec1 != '.') { 
+if (dec2 == '.') ttl += "0";
+else ttl += ".00";
+}
+form.total.value = "Rs" + ttl; // display total amount
+}
+//  End -->
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Videos Rental And Reviewing System</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing;
+ border-box;}
+
+.div1 {
+  width: 1250px;
+  height: 300px;
+  border: 3px solid #f1f1f1;
+}
+.div4 {
+  width: 1150px;
+  height: 600px;
+  border: 0px solid #f1f1f1;
+  float:right;
+}
+.div3 {
+  width: 1150px;
+  height: 800px;
+  border: 0px solid #f1f1f1;
+}
+.div2 {
+  width: 300px;
+  height: 550px;
+  border: 3px solid #f1f1f1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  width : 90%;
+  float : center;
+  border-radius:25px;
+}
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}.topnav a:hover {
+  background-color:#ffff;
+  color: black;
+  border-radius:15px;
+}
+.topnav b {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}.topnav a:hover {
+  background-color:#ffff;
+  color: black;
+}
+
+
+
+.topnav .search-container {
+  float: center;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border:black 2px;
+  border-radius: 15px;
+  width:50%;
+  height:10%;
+}
+
+.topnav .search-container button {
+  float: center;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 800px) {
+  .topnav .search-container {
+    float: none;
+	
+  }
+   .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100px;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border:35px solid blue; 
+height:300px;	
+  }
+}
+img {
+  border-radius: 50%;
+  float:right;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: "AS.jpg";
+width:30%;
+height:30%;
+float:left;
+
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  float:right;
+  margin: 20px;
+  width: 400px;
+  height:400px;
+  padding: 16px;
+  ;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 150px;
+  height:1px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+  .comment {
+      width: 250px;
+      height: 150px;
+      padding: 10px;
+      background-color: #f1f1f1;
+	  float:center;
+      }
+	   .commentt{
+      width: 250px;
+      height: 150px;
+      padding: 10px;
+      background-color: #f1f1f1;
+	  float:right;
+      }
+	  .commen {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      background-color: #f1f1f1;
+	  float:right;
+      }
+	  .checked {
+	  float:right;
+  color: white;
+}
+.un {
+  color: gold;
+  float:right;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: #000080;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:right;
+}
+
+input[type=submit]:hover {
+  background-color: BLUE;
+}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+</style>
+</head>
+<body background="HP.jpg" width="100%">
+
+<center> <div class="topnav">
+<title>"Videos Rental And Reviewing System"</title>
+
+  <center> <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i> </button>  <img src="AS.jpg" alt="Avatar" width="60px" height="60px">
+	  <a class="active" href="#home">Logout</a>
+	  <a class="active" href="#home">Stats</a>
+	   <b align="left" class="active" href="#home">Exisiting Member</b>
+	 
+	  </center>
+	  </center>
+	
+    </form>
+	
+  </div>
+  
+  <div class="div1">
+  <div><br>
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star un"></span>
+<span class="fa fa-star un"></span>
+<span class="fa fa-star un"></span>
+  
+  <div class="bg-img">
+   
+  <form action="/action_page.php" class="container">
+  <ul>
+ <label for="fname">Name&nbsp;&emsp;&nbsp;&emsp; </label>
+  <input type="text" id="sn" name="sn"   placeholder="Your Full Name.." ><br>
+	 <label for="fname">Contact No. </label>
+    <input type="text" id="sn" name="sn"   placeholder="Your Contact Number.." ><br>
+	<label for="Gender">ID Type&nbsp;&emsp;&nbsp;&nbsp;</label>
+	<input type="text" id="sn" name="sn"   placeholder="Your ID Type">
+<br> <label for="fname">ID Number&nbsp;&nbsp; </label>
+    <input type="text" id="sn" name="sn"   placeholder="Your ID Number.." >
+	
+    
+	</ul>
+ 
+</form>
+
+
+</form>
+</div><br><br>
+<input align="right" type="image" src="AS.jpg" alt="view" width="200" height="200">
+<center>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+Address &emsp; <textarea align="right" class="comment">Type your Address here..</textarea>Address</center>
+
+  </div>
+</div><br>
+<div class="div3">
+<center>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Number of People with Him &emsp; <textarea align="right" class="commen"> </textarea></center>
+
+<div class="div4"><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Note &emsp; <textarea align="right" class="commentt"> </textarea></center>
+
+<div class="div2">
+<center>
+<table border="0" cellpadding="1" cellspacing="0" width="692" id="mainbg"><tbody><tr><td>
+
+ <form name="coinform">
+    <br>  <div align="left">
+	  <table border="1">
+        <tbody>
+		 <tr> <th>10000</th><th><input type="text" name="hun" size="3"></th></tr>
+		 <tr> <th>5000</th><th><input type="text" name="fif" size="3"></th></tr>
+         <tr> <th>2000</th><th><input type="text" name="two" size="3"></th></tr>
+         <tr> <th>1000</th><th><input type="text" name="twe" size="3"></th></tr>
+          <tr><th>500</th><th><input type="text" name="ten" size="3"></th></tr>
+          <tr><th>100</th> <th><input type="text" name="fiv" size="3"></th></tr>
+		 <tr> <th>50</th><th><input type="text" name="one" size="3"></th></tr>     
+       
+        <tr>
+          <td colspan="7" align="left"><input type="button" name="calc" value="Calculate" onclick="javascript:money(this.form)"> <input type="text" name="total" size="10">
+		  </td>
+       
+	   </tr>
+      </tbody>
+	  </table>
+	  <br><input align="right" type="submit" value="Submit"> <input align="center" type="submit" value="Back">
+
+      </center>
+	  
+	  
+
+</div>
+
+</div>
+
+	  </div>
+	  
+	  
+    </form>
+	
+</body>
+</html>
